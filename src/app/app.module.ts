@@ -21,7 +21,7 @@ import { ConfigurableGridModule } from 'src/grid/configurable-grid/configurable-
 //   //   component: MainpanelComponent 
 //   // }
 //   // { path: '**', component: PageNotFoundComponent }
-// ];
+// ]; 
 @NgModule({
   declarations: [
     
