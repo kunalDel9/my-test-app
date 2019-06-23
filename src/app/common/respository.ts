@@ -70,9 +70,7 @@ export class DataRepository {
             ]
         }
     ]
-    dataStudent = [{
-        id: 1,
-
+    dataStudent = {
         Data: [{ ID: 1001, Name: 'Rahul', Roll: 1, Class: '1', FName: 'Ram Singh', Address: 'Mumbai', Pin: '110000' },
         { ID: 1003, Name: 'Dev', Roll: 2, Class: '2', FName: 'Krishan Singh', Address: 'Delhi', Pin: '110000' },
         { ID: 1004, Name: 'Rahim', Roll: 51, Class: '2', FName: 'Balram Singh', Address: 'Patna', Pin: '110000' },
@@ -80,11 +78,8 @@ export class DataRepository {
         { ID: 1006, Name: 'Amar', Roll: 61, Class: '11', FName: 'Kailash Singh', Address: 'Mumbai', Pin: '110000' },
         { ID: 1007, Name: 'Rohit', Roll: 81, Class: '12', FName: 'Sumit Singh', Address: 'Mumbai', Pin: '110000' }
         ]
-    }]
-    dataEmployee = [{
-        id: 2,
-        ListName: 'employee',
-        ListCode: 'employee',
+    }
+    dataEmployee = {
         Data: [{ ID: 1, Name: 'Raja', EmpID: 1, Dept: '1', FName: 'Rahul Singh', Address: 'Mumbai', Pin: '120000' },
         { ID: 2, Name: 'Bhim', EmpID: 1, Dept: '1', FName: 'Dev Singh', Address: 'Delhi', Pin: '110100' },
         { ID: 3, Name: 'Gurudev', EmpID: 1, Dept: '1', FName: 'A.K Singh', Address: 'Patna', Pin: '110030' },
@@ -92,13 +87,13 @@ export class DataRepository {
         { ID: 5, Name: 'Karim', EmpID: 1, Dept: '1', FName: 'Amar Singh', Address: 'Mumbai', Pin: '110300' },
         { ID: 6, Name: 'Angela', EmpID: 1, Dept: '1', FName: 'Rohit Singh', Address: 'Mumbai', Pin: '110900' }
         ]
-    }]
+    }
 
     getCols(type): any {
         return this.ListConfigratorRepo.find(x => x.ListCode === type).Cols;
     }
     getData(type): any {
-        if(type === 'employee') {return this.dataEmployee;
-        }        else if(type === 'student'){return this.dataStudent; }
+        if(type === 'employee') {return this.dataEmployee.Data;
+        }        else if(type === 'student'){return this.dataStudent.Data; }
     }
 }

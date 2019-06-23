@@ -14,12 +14,7 @@ export class ListmasterComponent implements OnInit {
 
   cols: any[];
   ngOnInit() {
-    this.cols = [
-      // { field: 'vin', header: 'Vin' },
-      // { field: 'year', header: 'Year' },
-      // { field: 'brand', header: 'Brand' },
-      // { field: 'color', header: 'Color' }
-    ];
+    
     this.onDataSourceChange(this.selected);
     // this.getdata();
   }
@@ -29,7 +24,10 @@ export class ListmasterComponent implements OnInit {
   onDataSourceChange(type){
     this.griddata.getColData(type).subscribe(data =>{
       this.cols = data;
-    } );
+      } );
+    this.griddata.getRowData(type).subscribe(rdata => {
+        this.data = rdata;
+        } );
   }
 
 }

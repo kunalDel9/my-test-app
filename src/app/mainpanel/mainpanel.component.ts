@@ -9,7 +9,7 @@ export class MainpanelComponent implements OnInit {
 
   constructor() { }
  
-  showItem = 'ListConfig';
+  showItem = 'Master';
   ngOnInit() {
   }
   onItemClick(item){

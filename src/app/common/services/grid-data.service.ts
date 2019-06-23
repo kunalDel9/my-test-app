@@ -18,4 +18,13 @@ export class GridDataService {
     });
    return studentsObservable;
   }
+  getRowData(type): Observable<any> {
+    const tempdata = this.data.getData(type);
+    const studentsObservable = new Observable(observer => {
+       setTimeout(() => {
+           observer.next(tempdata);
+       }, 1000);
+     });
+    return studentsObservable;
+  }
 }
