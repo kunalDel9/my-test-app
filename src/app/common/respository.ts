@@ -1,10 +1,14 @@
-export class ListmasterComponent {
+import { Injectable } from '@angular/core';
+@Injectable({
+    providedIn: 'root'
+  })
+export class DataRepository {
     constructor() { }
     ListConfigratorRepo = [
         {
-            ListID: 1, ListName: 'Student List', ListCode: 'student', ColData: [
+            ListID: 1, ListName: 'Student List', ListCode: 'student', Cols: [
                 {
-                    Id: 1, ColName: 'ID', Caption: 'Student Name', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    Id: 1, ColName: 'ID', Caption: 'StudentID', IsSelected: true, IsPrimary: false, IsEditable: false,
                     IsSortable: true
                 },
                 {
@@ -12,55 +16,55 @@ export class ListmasterComponent {
                     IsSortable: true
                 },
                 {
-                    Id: 3, ColName: 'Roll', Caption: 'Student Name', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    Id: 3, ColName: 'Roll', Caption: 'Roll', IsSelected: true, IsPrimary: false, IsEditable: false,
                     IsSortable: true
                 },
                 {
-                    Id: 4, ColName: 'Class', Caption: 'Student Name', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    Id: 4, ColName: 'Class', Caption: 'Class', IsSelected: true, IsPrimary: false, IsEditable: false,
                     IsSortable: true
                 },
                 {
-                    Id: 5, ColName: 'FName', Caption: 'Student Name', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    Id: 5, ColName: 'FName', Caption: 'Father Name', IsSelected: true, IsPrimary: false, IsEditable: false,
                     IsSortable: true
                 },
                 {
-                    Id: 6, ColName: 'Address', Caption: 'Student Name', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    Id: 6, ColName: 'Address', Caption: 'Address', IsSelected: true, IsPrimary: false, IsEditable: false,
                     IsSortable: true
                 },
                 {
-                    Id: 7, ColName: 'Pin', Caption: 'Student Name', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    Id: 7, ColName: 'Pin', Caption: 'PIN', IsSelected: true, IsPrimary: false, IsEditable: false,
                     IsSortable: true
                 },
             ]
         },
         {
-            ListID: 2, ListName: 'Employee List', ListCode: 'employee', ColData: [
+            ListID: 2, ListName: 'Employee List', ListCode: 'employee', Cols: [
                 {
-                    Id: 1, ColName: 'ID', Caption: 'Student Name', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    Id: 1, ColName: 'ID', Caption: 'EmpID', IsSelected: true, IsPrimary: true, IsEditable: false,
                     IsSortable: true
                 },
                 {
-                    Id: 2, ColName: 'Name', Caption: 'Student Name', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    Id: 2, ColName: 'Name', Caption: 'Employee Name', IsSelected: true, IsPrimary: false, IsEditable: false,
                     IsSortable: true
                 },
                 {
-                    Id: 3, ColName: 'EmpID', Caption: 'Student Name', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    Id: 3, ColName: 'EmpID', Caption: 'Employee ID', IsSelected: true, IsPrimary: false, IsEditable: false,
                     IsSortable: true
                 },
                 {
-                    Id: 4, ColName: 'Dept', Caption: 'Student Name', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    Id: 4, ColName: 'Dept', Caption: 'Department', IsSelected: true, IsPrimary: false, IsEditable: false,
                     IsSortable: true
                 },
                 {
-                    Id: 5, ColName: 'FName', Caption: 'Student Name', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    Id: 5, ColName: 'FName', Caption: 'Father Name', IsSelected: true, IsPrimary: false, IsEditable: false,
                     IsSortable: true
                 },
                 {
-                    Id: 6, ColName: 'Address', Caption: 'Student Name', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    Id: 6, ColName: 'Address', Caption: 'Address', IsSelected: true, IsPrimary: false, IsEditable: false,
                     IsSortable: true
                 },
                 {
-                    Id: 7, ColName: 'Pin', Caption: 'Student Name', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    Id: 7, ColName: 'Pin', Caption: 'PIN', IsSelected: true, IsPrimary: false, IsEditable: false,
                     IsSortable: true
                 },
             ]
@@ -90,4 +94,11 @@ export class ListmasterComponent {
         ]
     }]
 
+    getCols(type): any {
+        return this.ListConfigratorRepo.find(x => x.ListCode === type).Cols;
+    }
+    getData(type): any {
+        if(type === 'employee') {return this.dataEmployee;
+        }        else if(type === 'student'){return this.dataStudent; }
+    }
 }

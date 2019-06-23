@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GridDataService } from '../common/services/grid-data.service';
 
 @Component({
   selector: 'app-listmaster',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListmasterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private griddata: GridDataService) { }
+  selected = 'employee';
   data: any[];
 
   cols: any[];
@@ -23,6 +25,10 @@ export class ListmasterComponent implements OnInit {
   getdata() {
     this.data = [{ vin: 'a', year: 'b', brand: 'c', color: 'd' }, { vin: 'a', year: 'b', brand: 'c', color: 'd' }]
   }
-
+  onDataSourceChange(type){
+    this.griddata.getColData(type).subscribe(data =>{
+      this.cols = data;
+    } );
+  }
 
 }
