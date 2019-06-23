@@ -11,14 +11,17 @@ import { MatSidenavModule, MatSelectModule, MatToolbarModule, MatIconModule} fro
 import {TableModule} from 'primeng/table';
 import { RouterModule, Routes } from '@angular/router';
 import { CitigridComponent } from './citigrid/citigrid.component';
-const appRoutes: Routes = [
-  { path: 'list/:id',      component: CitigridComponent },
-  { path: '',
-    redirectTo: '',
-    pathMatch: 'full'
-  }
-  // { path: '**', component: PageNotFoundComponent }
-];
+import { ConfigurableGridModule } from 'src/grid/configurable-grid/configurable-grid.module';
+// const appRoutes: Routes = [
+//   { path: 'list/:id',      component: CitigridComponent },
+//   { path: '',pathMatch: 'full', component: MainpanelComponent },
+//   // { path: '',
+//   //   redirectTo: '',
+//   //   pathMatch: 'full',
+//   //   component: MainpanelComponent 
+//   // }
+//   // { path: '**', component: PageNotFoundComponent }
+// ];
 @NgModule({
   declarations: [
     
@@ -37,7 +40,8 @@ const appRoutes: Routes = [
     MatToolbarModule,
     MatIconModule,
     TableModule, MatSelectModule,
-    HttpClientModule
+    HttpClientModule,
+    ConfigurableGridModule
     // RouterModule.forRoot(
     //   appRoutes,
     //   { enableTracing: false } // <-- debugging purposes only

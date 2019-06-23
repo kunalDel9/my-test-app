@@ -14,6 +14,7 @@ export class CitigridComponent implements OnInit {
 
   cols: any[];
   ngOnInit() {
+    
     this.route.paramMap.subscribe(params => {
       console.log(params.get('id'));
     });
