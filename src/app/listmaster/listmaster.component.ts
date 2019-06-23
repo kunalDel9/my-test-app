@@ -15,16 +15,17 @@ export class ListmasterComponent implements OnInit {
   cols: any[];
   ngOnInit() {
     this.cols = [
-      { field: 'vin', header: 'Vin' },
-      { field: 'year', header: 'Year' },
-      { field: 'brand', header: 'Brand' },
-      { field: 'color', header: 'Color' }
+      // { field: 'vin', header: 'Vin' },
+      // { field: 'year', header: 'Year' },
+      // { field: 'brand', header: 'Brand' },
+      // { field: 'color', header: 'Color' }
     ];
-    this.getdata();
+    this.onDataSourceChange(this.selected);
+    // this.getdata();
   }
-  getdata() {
-    this.data = [{ vin: 'a', year: 'b', brand: 'c', color: 'd' }, { vin: 'a', year: 'b', brand: 'c', color: 'd' }]
-  }
+  // getdata() {
+  //   this.data = [{ vin: 'a', year: 'b', brand: 'c', color: 'd' }, { vin: 'a', year: 'b', brand: 'c', color: 'd' }]
+  // }
   onDataSourceChange(type){
     this.griddata.getColData(type).subscribe(data =>{
       this.cols = data;
