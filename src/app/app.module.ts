@@ -9,16 +9,16 @@ import { ListconfiguratorComponent } from './listconfigurator/listconfigurator.c
 import { ListmasterComponent } from './listmaster/listmaster.component';
 import { MatSidenavModule, MatSelectModule, MatToolbarModule, MatIconModule} from '@angular/material';
 import {TableModule} from 'primeng/table';
-import { RouterModule, Routes } from '@angular/router';
-import { CitigridComponent } from './citigrid/citigrid.component';
+
 import { ConfigurableGridModule } from 'src/grid/configurable-grid/configurable-grid.module';
+import { ConfigurableGridComponent } from 'src/grid/configurable-grid/configurablegrid/configurable-grid.component';
 @NgModule({
   declarations: [
     AppComponent,
     MainpanelComponent,
     ListconfiguratorComponent,
     ListmasterComponent,
-    CitigridComponent
+    ConfigurableGridComponent
     ],
   imports: [
     BrowserModule,

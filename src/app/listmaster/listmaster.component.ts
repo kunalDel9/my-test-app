@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GridDataService } from '../common/services/grid-data.service';
+
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,13 +9,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ListmasterComponent implements OnInit {
 
-  constructor(private griddata: GridDataService, private route: ActivatedRoute) { }
+  constructor( private route: ActivatedRoute) { }
   selected = 'employee';
   data: any[];
 
   cols: any[];
   ngOnInit() {
-    this.onDataSourceChange(this.selected);
+   // this.onDataSourceChange(this.selected);
     console.log('ngonint');
     this.route.paramMap.subscribe(params => {
       console.log(params.get('id'));
@@ -25,13 +25,13 @@ export class ListmasterComponent implements OnInit {
   // getdata() {
   //   this.data = [{ vin: 'a', year: 'b', brand: 'c', color: 'd' }, { vin: 'a', year: 'b', brand: 'c', color: 'd' }]
   // }
-  onDataSourceChange(type){
-    this.griddata.getColData(type).subscribe(data =>{
-      this.cols = data;
-      } );
-    this.griddata.getRowData(type).subscribe(rdata => {
-        this.data = rdata;
-        } );
-  }
+  // onDataSourceChange(type){
+  //   this.griddata.getColData(type).subscribe(data =>{
+  //     this.cols = data;
+  //     } );
+  //   this.griddata.getRowData(type).subscribe(rdata => {
+  //       this.data = rdata;
+  //       } );
+  // }
 
 }
