@@ -12,25 +12,13 @@ import {TableModule} from 'primeng/table';
 import { RouterModule, Routes } from '@angular/router';
 import { CitigridComponent } from './citigrid/citigrid.component';
 import { ConfigurableGridModule } from 'src/grid/configurable-grid/configurable-grid.module';
-// const appRoutes: Routes = [
-//   { path: 'list/:id',      component: CitigridComponent },
-//   { path: '',pathMatch: 'full', component: MainpanelComponent },
-//   // { path: '',
-//   //   redirectTo: '',
-//   //   pathMatch: 'full',
-//   //   component: MainpanelComponent 
-//   // }
-//   // { path: '**', component: PageNotFoundComponent }
-// ]; 
 @NgModule({
   declarations: [
-    
     AppComponent,
     MainpanelComponent,
     ListconfiguratorComponent,
     ListmasterComponent,
     CitigridComponent
-    
     ],
   imports: [
     BrowserModule,
@@ -42,11 +30,6 @@ import { ConfigurableGridModule } from 'src/grid/configurable-grid/configurable-
     TableModule, MatSelectModule,
     HttpClientModule,
     ConfigurableGridModule
-    // RouterModule.forRoot(
-    //   appRoutes,
-    //   { enableTracing: false } // <-- debugging purposes only
-    // )
-
   ],
   providers: [],
   bootstrap: [AppComponent]
