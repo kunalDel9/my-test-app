@@ -9,6 +9,15 @@ import { ListconfiguratorComponent } from './listconfigurator/listconfigurator.c
 import { ListmasterComponent } from './listmaster/listmaster.component';
 import { MatSidenavModule, MatSelectModule, MatToolbarModule, MatIconModule} from '@angular/material';
 import {TableModule} from 'primeng/table';
+import { RouterModule, Routes } from '@angular/router';
+const appRoutes: Routes = [
+  { path: 'list/:id',      component: ListmasterComponent },
+  { path: '',
+    redirectTo: '',
+    pathMatch: 'full'
+  }
+  // { path: '**', component: PageNotFoundComponent }
+];
 @NgModule({
   declarations: [
     
@@ -26,7 +35,11 @@ import {TableModule} from 'primeng/table';
     MatToolbarModule,
     MatIconModule,
     TableModule, MatSelectModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: false } // <-- debugging purposes only
+    )
 
   ],
   providers: [],

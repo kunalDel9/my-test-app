@@ -16,7 +16,10 @@
     <mat-drawer-container class="panelcontainer">
       <mat-drawer mode="side" opened>
         <a (click)="onItemClick('ListConfig')"> List Configurator</a><br>
-        <a (click)="onItemClick('Master')"> Master</a>
+        <a (click)="onItemClick('Master')"> Master</a><br>
+        
+        <a  target="_blank" routerLink="/list/employee">Employee</a><br>
+        <a  target="_blank" routerLink="/list/student">Student</a><br>
       </mat-drawer>
       <mat-drawer-content>
         <app-listmaster *ngIf="showItem=='Master'"></app-listmaster>

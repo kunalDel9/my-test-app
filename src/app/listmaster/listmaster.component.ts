@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GridDataService } from '../common/services/grid-data.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-listmaster',
@@ -8,14 +9,17 @@ import { GridDataService } from '../common/services/grid-data.service';
 })
 export class ListmasterComponent implements OnInit {
 
-  constructor(private griddata: GridDataService) { }
+  constructor(private griddata: GridDataService, private route: ActivatedRoute) { }
   selected = 'employee';
   data: any[];
 
   cols: any[];
   ngOnInit() {
-    
     this.onDataSourceChange(this.selected);
+
+    this.route.paramMap.subscribe(params => {
+      console.log(params.get('id'));
+    });
     // this.getdata();
   }
   // getdata() {
