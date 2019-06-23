@@ -10,8 +10,9 @@ import { ListmasterComponent } from './listmaster/listmaster.component';
 import { MatSidenavModule, MatSelectModule, MatToolbarModule, MatIconModule} from '@angular/material';
 import {TableModule} from 'primeng/table';
 import { RouterModule, Routes } from '@angular/router';
+import { CitigridComponent } from './citigrid/citigrid.component';
 const appRoutes: Routes = [
-  { path: 'list/:id',      component: ListmasterComponent },
+  { path: 'list/:id',      component: CitigridComponent },
   { path: '',
     redirectTo: '',
     pathMatch: 'full'
@@ -24,7 +25,8 @@ const appRoutes: Routes = [
     AppComponent,
     MainpanelComponent,
     ListconfiguratorComponent,
-    ListmasterComponent
+    ListmasterComponent,
+    CitigridComponent
     
     ],
   imports: [
@@ -35,11 +37,11 @@ const appRoutes: Routes = [
     MatToolbarModule,
     MatIconModule,
     TableModule, MatSelectModule,
-    HttpClientModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: false } // <-- debugging purposes only
-    )
+    HttpClientModule
+    // RouterModule.forRoot(
+    //   appRoutes,
+    //   { enableTracing: false } // <-- debugging purposes only
+    // )
 
   ],
   providers: [],

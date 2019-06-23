@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GridDataService } from '../common/services/grid-data.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-citigrid',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CitigridComponent implements OnInit {
 
-  constructor() { }
+  constructor(private griddata: GridDataService, private route: ActivatedRoute) { }
+  data: any[];
 
+  cols: any[];
   ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      console.log(params.get('id'));
+    });
   }
-
+  onDataSourceChange(type){
+    this.griddata.getColData(type).subscribe(data =>{
+      this.cols = data;
+      } );
+    this.griddata.getRowData(type).subscribe(rdata => {
+        this.data = rdata;
+        } );
+  }
 }

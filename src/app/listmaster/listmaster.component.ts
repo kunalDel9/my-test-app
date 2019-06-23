@@ -16,7 +16,7 @@ export class ListmasterComponent implements OnInit {
   cols: any[];
   ngOnInit() {
     this.onDataSourceChange(this.selected);
-
+    console.log('ngonint');
     this.route.paramMap.subscribe(params => {
       console.log(params.get('id'));
     });
