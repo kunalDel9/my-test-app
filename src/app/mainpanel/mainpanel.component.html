@@ -18,8 +18,8 @@
         <a (click)="onItemClick('ListConfig')"> List Configurator</a><br>
         <a (click)="onItemClick('Master')"> Master</a><br>
         
-        <a  target="_blank" href="#" routerLink="/list/1">Employee</a><br>
-        <a  target="_blank" href="#" routerLink="/list/2">Student</a><br>
+        <a  target="_blank" href="#" routerLink="/list/employee">Employee</a><br>
+        <a  target="_blank" href="#" routerLink="/list/student">Student</a><br>
       </mat-drawer>
       <mat-drawer-content>
         <app-listmaster *ngIf="showItem=='Master'"></app-listmaster>

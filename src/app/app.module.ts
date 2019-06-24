@@ -11,14 +11,14 @@ import { MatSidenavModule, MatSelectModule, MatToolbarModule, MatIconModule} fro
 import {TableModule} from 'primeng/table';
 
 import { ConfigurableGridModule } from 'src/grid/configurable-grid/configurable-grid.module';
-import { ConfigurableGridComponent } from 'src/grid/configurable-grid/configurablegrid/configurable-grid.component';
+// import { ConfigurableGridComponent } from 'src/grid/configurable-grid/configurablegrid/configurable-grid.component';
 @NgModule({
   declarations: [
     AppComponent,
     MainpanelComponent,
     ListconfiguratorComponent,
     ListmasterComponent,
-    ConfigurableGridComponent
+    // ConfigurableGridComponent
     ],
   imports: [
     BrowserModule,
