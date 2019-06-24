@@ -8,64 +8,64 @@ export class DataRepository {
         {
             ListID: 1, ListName: 'Student List', ListCode: 'student', Cols: [
                 {
-                    Id: 1, ColName: 'ID', Caption: 'StudentID', IsSelected: true, IsPrimary: false, IsEditable: false,
-                    IsSortable: true
+                    Id: 1, field: 'ID', headerName: 'StudentID', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    sortable: true, filter: true
                 },
                 {
-                    Id: 2, ColName: 'Name', Caption: 'Student Name', IsSelected: true, IsPrimary: false, IsEditable: false,
-                    IsSortable: true
+                    Id: 2, field: 'Name', headerName: 'Student Name', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    sortable: true, filter: true, checkboxSelection: true
                 },
                 {
-                    Id: 3, ColName: 'Roll', Caption: 'Roll', IsSelected: true, IsPrimary: false, IsEditable: false,
-                    IsSortable: true
+                    Id: 3, field: 'Roll', headerName: 'Roll', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    sortable: true, filter: true
                 },
                 {
-                    Id: 4, ColName: 'Class', Caption: 'Class', IsSelected: true, IsPrimary: false, IsEditable: false,
-                    IsSortable: true
+                    Id: 4, field: 'Class', headerName: 'Class', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    sortable: true, filter: true
                 },
                 {
-                    Id: 5, ColName: 'FName', Caption: 'Father Name', IsSelected: true, IsPrimary: false, IsEditable: false,
-                    IsSortable: true
+                    Id: 5, field: 'FName', headerName: 'Father Name', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    sortable: true, filter: true
                 },
                 {
-                    Id: 6, ColName: 'Address', Caption: 'Address', IsSelected: true, IsPrimary: false, IsEditable: false,
-                    IsSortable: true
+                    Id: 6, field: 'Address', headerName: 'Address', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    sortable: true, filter: true
                 },
                 {
-                    Id: 7, ColName: 'Pin', Caption: 'PIN', IsSelected: true, IsPrimary: false, IsEditable: false,
-                    IsSortable: true
+                    Id: 7, field: 'Pin', headerName: 'PIN', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    sortable: true, filter: true
                 },
             ]
         },
         {
             ListID: 2, ListName: 'Employee List', ListCode: 'employee', Cols: [
                 {
-                    Id: 1, ColName: 'ID', Caption: 'EmpID', IsSelected: true, IsPrimary: true, IsEditable: false,
-                    IsSortable: true
+                    Id: 1, field: 'ID', headerName: 'EmpID', IsSelected: true, IsPrimary: true, IsEditable: false,
+                    IsSortable: true, sortable: true, filter: true
                 },
                 {
-                    Id: 2, ColName: 'Name', Caption: 'Employee Name', IsSelected: true, IsPrimary: false, IsEditable: false,
-                    IsSortable: true
+                    Id: 2, field: 'Name', headerName: 'Employee Name', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    IsSortable: true, sortable: true, filter: true, checkboxSelection: true
                 },
                 {
-                    Id: 3, ColName: 'EmpID', Caption: 'Employee ID', IsSelected: true, IsPrimary: false, IsEditable: false,
-                    IsSortable: true
+                    Id: 3, field: 'EmpID', headerName: 'Employee ID', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    IsSortable: true, sortable: true, filter: true
                 },
                 {
-                    Id: 4, ColName: 'Dept', Caption: 'Department', IsSelected: true, IsPrimary: false, IsEditable: false,
-                    IsSortable: true
+                    Id: 4, field: 'Dept', headerName: 'Department', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    IsSortable: true, sortable: true, filter: true
                 },
                 {
-                    Id: 5, ColName: 'FName', Caption: 'Father Name', IsSelected: true, IsPrimary: false, IsEditable: false,
-                    IsSortable: true
+                    Id: 5, field: 'FName', headerName: 'Father Name', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    IsSortable: true, sortable: true, filter: true
                 },
                 {
-                    Id: 6, ColName: 'Address', Caption: 'Address', IsSelected: true, IsPrimary: false, IsEditable: false,
-                    IsSortable: true
+                    Id: 6, field: 'Address', headerName: 'Address', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    IsSortable: true, sortable: true, filter: true
                 },
                 {
-                    Id: 7, ColName: 'Pin', Caption: 'PIN', IsSelected: true, IsPrimary: false, IsEditable: false,
-                    IsSortable: true
+                    Id: 7, field: 'Pin', headerName: 'PIN', IsSelected: true, IsPrimary: false, IsEditable: false,
+                    IsSortable: true, sortable: true, filter: true
                 },
             ]
         }

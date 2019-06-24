@@ -27,14 +27,18 @@ rowData = [
     
     this.route.paramMap.subscribe(params => {
       console.log(params.get('id'));
+      const type = params.get('id');
+      if(type){
+        this.onDataSourceChange(type);
+      }
     });
   }
   onDataSourceChange(type){
     this.griddata.getColData(type).subscribe(data =>{
-      this.cols = data;
+      this.columnDefs = data;
       } );
     this.griddata.getRowData(type).subscribe(rdata => {
-        this.data = rdata;
+        this.rowData = rdata;
         } );
   }
 }
